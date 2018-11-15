@@ -1,135 +1,148 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>reveal.js</title>
 
-  <title>reveal.js</title>
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/solarized.css" />
 
-  <link rel="stylesheet" href="css/reveal.css" />
-  <link rel="stylesheet" href="css/theme/solarized.css" />
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
 
-  <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="lib/css/zenburn.css" />
+    <link rel="stylesheet" href="custom.css" />
 
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.type = "text/css";
-    link.href = window.location.search.match(/print-pdf/gi) ?
-      "css/print/pdf.css" :
-      "css/print/paper.css";
-    document.getElementsByTagName("head")[0].appendChild(link);
-  </script>
-</head>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
 
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section>
-        <h1>ReactJs</h1>
-        <h3>Introduzione allo sviluppo di SPA</h3>
-
-        <p>
-          <small>
-            Presentato da:
-            <a href="mailto:marco.cotrufo@amaris.com">Marco Cotrufo</a>
-          </small>
-        </p>
-      </section>
-
-      <section>
-        <h3>Obiettivo</h3>
-
-        <ul>
-          <li class="fragment">Familiarità con ES6</li>
-          <li class="fragment">Saper sviluppare un'applicazione ReactJS</li>
-          <li class="fragment">Conoscere le best practices</li>
-        </ul>
-
-        <aside class="notes">Come lo realizzeremo? Creando un'app</aside>
-      </section>
-
-      <section>
-        <h3>Requisiti</h3>
-
-        <ul>
-          <li class="fragment">Conoscenza di Javascript</li>
-          <li class="fragment">
-            Dimestichezza con <code>npm</code> o <code>yarn</code>
-          </li>
-          <li class="fragment">
-            Dimestichezza con la <code>console</code> o <code>shell</code>
-          </li>
-          <li class="fragment">Conoscenza di <code>git</code></li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Perché javascript</h3>
-
-        <div class="fragment" data-fragment-index="4">
-          <p class="fragment highlight-red" data-fragment-index="5">
-            <small>questa presentazione è scritta in javascript</small>
-          </p>
-        </div>
-
-        <ul>
-          <li class="fragment" data-fragment-index="1">
-            è facile da imparare
-          </li>
-          <li class="fragment" data-fragment-index="2">è efficiente</li>
-          <li class="fragment" data-fragment-index="3">
-            si può usare per qualsiasi tipo di applicazione
-          </li>
-        </ul>
-
-        <aside class="notes">- efficiente: strumenti di sviluppo</aside>
-      </section>
-
-      <section>
-        <img src="https://www.extrategy.net/sites/default/files/inline-images/download.jpeg" />
-      </section>
-
-      <section>
-        <h3>ECMAScript 6</h3>
-        <p class="fragment">(o ES2015)</p>
-
-        <small>
-          La sesta edizione, conosciuta come ECMAScript 2015[9] ma anche come
-          "Harmony", apporta modifiche sintattiche significative che aprono la
-          porta ad applicazioni più complesse, includendo classi e moduli
-          definendoli semanticamente come lo "strict mode" in ECMAScript 5.
-          Altre nuove features sono diversi iteratori, for/of loop,
-          Python-style generators e generator expression, arrow functions,
-          binary data, typed arrays, collections (maps, sets e weak maps),
-          promises, miglioramenti delle funzioni matematiche, reflection e
-          proxies (metaprogrammazione per virtual objects).
-        </small>
-
-        <small>Fonte <a href="https://it.wikipedia.org/wiki/ECMAScript">Wikipedia</a></small>
-      </section>
-
-      <section>
-        <a href="https://babeljs.io/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=es2015&prettier=true&targets=&version=6.26.0&envVersion=">
-          <p>Babel REPL</p>
-          <p>https://babeljs.io/repl</p>
-        </a>
-      </section>
-
-      <section>
+  <body>
+    <div class="reveal">
+      <div class="slides">
         <section>
-          <h3>Dichiarazione delle variabili (I)</h3>
+          <h1>ReactJs</h1>
+          <h3>Introduzione allo sviluppo di SPA</h3>
 
-          <pre class="fragment"><code data-trim>
+          <p>
+            <small>
+              Presentato da:
+              <a href="mailto:marco.cotrufo@amaris.com">Marco Cotrufo</a>
+            </small>
+          </p>
+        </section>
+
+        <section>
+          <h3>Obiettivo</h3>
+
+          <ul>
+            <li class="fragment">Familiarità con ES6</li>
+            <li class="fragment">Saper sviluppare un'applicazione ReactJS</li>
+            <li class="fragment">Conoscere le best practices</li>
+          </ul>
+
+          <aside class="notes">Come lo realizzeremo? Creando un'app</aside>
+        </section>
+
+        <section>
+          <h3>Requisiti</h3>
+
+          <ul>
+            <li class="fragment">Conoscenza di Javascript</li>
+            <li class="fragment">
+              Dimestichezza con <code>npm</code> o <code>yarn</code>
+            </li>
+            <li class="fragment">
+              Dimestichezza con la <code>console</code> o <code>shell</code>
+            </li>
+            <li class="fragment">Conoscenza di <code>git</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Perché javascript</h3>
+
+          <div class="fragment" data-fragment-index="4">
+            <p class="fragment highlight-red" data-fragment-index="5">
+              <small>questa presentazione è scritta in javascript</small>
+            </p>
+          </div>
+
+          <ul>
+            <li class="fragment" data-fragment-index="1">
+              è facile da imparare
+            </li>
+            <li class="fragment" data-fragment-index="2">è efficiente</li>
+            <li class="fragment" data-fragment-index="3">
+              si può usare per qualsiasi tipo di applicazione
+            </li>
+          </ul>
+
+          <aside class="notes">- efficiente: strumenti di sviluppo</aside>
+        </section>
+
+        <section>
+          <img
+            src="https://www.extrategy.net/sites/default/files/inline-images/download.jpeg"
+          />
+        </section>
+
+        <section>
+          <h3>ECMAScript 6</h3>
+          <p class="fragment">(o ES2015)</p>
+
+          <small>
+            La sesta edizione, conosciuta come ECMAScript 2015[9] ma anche come
+            "Harmony", apporta modifiche sintattiche significative che aprono la
+            porta ad applicazioni più complesse, includendo classi e moduli
+            definendoli semanticamente come lo "strict mode" in ECMAScript 5.
+            Altre nuove features sono diversi iteratori, for/of loop,
+            Python-style generators e generator expression, arrow functions,
+            binary data, typed arrays, collections (maps, sets e weak maps),
+            promises, miglioramenti delle funzioni matematiche, reflection e
+            proxies (metaprogrammazione per virtual objects).
+          </small>
+
+          <small
+            >Fonte
+            <a href="https://it.wikipedia.org/wiki/ECMAScript"
+              >Wikipedia</a
+            ></small
+          >
+        </section>
+
+        <section>
+          <a
+            href="https://babeljs.io/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=es2015&prettier=true&targets=&version=6.26.0&envVersion="
+          >
+            <p>Babel REPL</p>
+            <p>https://babeljs.io/repl</p>
+          </a>
+        </section>
+
+        <section>
+          <section>
+            <h3>Dichiarazione delle variabili (I)</h3>
+
+            <pre class="fragment"><code data-trim>
         // Valido
         var hello = "Hello darkness";
         var hello = "my old friend "
       </code></pre>
 
-          <pre class="fragment"><code data-trim>
+            <pre class="fragment"><code data-trim>
         var greeter = "Hello darkness";
         var times = 4;
     
@@ -139,21 +152,20 @@
     
         console.log(greeter) // my old friend
       </code></pre>
+          </section>
 
-        </section>
+          <section>
+            <h3>Dichiarazione delle variabili (II)</h3>
 
-        <section>
-          <h3>Dichiarazione delle variabili (II)</h3>
+            <p>Utilizzo di <code>let</code></p>
 
-          <p>Utilizzo di <code>let</code></p>
-
-          <pre class="fragment"><code data-trim>
+            <pre class="fragment"><code data-trim>
           let greeting = "say Hi";
           let greeting = "say Hello instead"; 
           //error: Identifier 'greeting' has already been declared
           </code></pre>
 
-          <pre class="fragment"><code data-trim>
+            <pre class="fragment"><code data-trim>
           let greeting = "Hello darkness";
           let times = 4;
        
@@ -163,48 +175,50 @@
            }
           console.log(hello) // hello is not defined
         </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Dichiarazione delle variabili (III)</h3>
+          <section>
+            <h3>Dichiarazione delle variabili (III)</h3>
 
-          <p>Utilizzo di <code>const</code></p>
+            <p>Utilizzo di <code>const</code></p>
 
-          <pre class="fragment"><code data-trim>
+            <pre class="fragment"><code data-trim>
           const greeting = "Hello darkness";
           greeting = "my old friend"; 
           //error :  Assignment to constant variable.
           </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <img src="https://camo.githubusercontent.com/c9a02013dea442e44c71040e1a2012a640333f83/687474703a2f2f6a6f7264696865722e65752f696d616765732f676c6f62616c5f7661726961626c65735f6d656d65312e6a7067" />
+          <section>
+            <img
+              src="https://camo.githubusercontent.com/c9a02013dea442e44c71040e1a2012a640333f83/687474703a2f2f6a6f7264696865722e65752f696d616765732f676c6f62616c5f7661726961626c65735f6d656d65312e6a7067"
+            />
+          </section>
         </section>
-      </section>
-      <section>
         <section>
-          <h3>Arrow functions (I)</h3>
+          <section>
+            <h3>Arrow functions (I)</h3>
 
-          Prima:
-          <pre><code data-trim>
+            Prima:
+            <pre><code data-trim>
 var myFancyFunction = function(a, b) {
   return a + b;
 };
           </code></pre>
 
-          <div class="fragment">
-            Dopo:
-            <pre><code data-trim>
+            <div class="fragment">
+              Dopo:
+              <pre><code data-trim>
 const myFancyFunction = (a, b) => a + b;
             </code></pre>
-          </div>
-        </section>
+            </div>
+          </section>
 
-        <section>
-          <h3>Arrow functions (II)</h3>
+          <section>
+            <h3>Arrow functions (II)</h3>
 
-          Prima:
-          <pre><code data-trim>
+            Prima:
+            <pre><code data-trim>
 var myAwesomeObject = {
   results = [],
   getResults = function() {
@@ -216,9 +230,9 @@ var myAwesomeObject = {
 };
           </code></pre>
 
-          <div class="fragment">
-            Dopo:
-            <pre><code data-trim>
+            <div class="fragment">
+              Dopo:
+              <pre><code data-trim>
 var myAwesomeObject = {
   results = [],
   getResults = () => myApiClient.getCustomers(customers => {
@@ -226,16 +240,16 @@ var myAwesomeObject = {
   });
 };
             </code></pre>
-          </div>
+            </div>
+          </section>
         </section>
-      </section>
 
-      <section>
-        <h3>Default parameters</h3>
+        <section>
+          <h3>Default parameters</h3>
 
-        <div class="fragment">
-          Prima
-          <pre><code data-trim>
+          <div class="fragment">
+            Prima
+            <pre><code data-trim>
               function sayHello(greeter, name) {
                 greeter = greeter || 'Hello ';
                 name = name || ' John Doe';
@@ -243,45 +257,45 @@ var myAwesomeObject = {
                 console.log(greeter, name); // Hello John Doe
               }
             </code></pre>
-        </div>
+          </div>
 
-        <div class="fragment">
-          Dopo
-          <pre><code data-trim>
+          <div class="fragment">
+            Dopo
+            <pre><code data-trim>
                 function sayHello(greeter = 'Hello ', name = 'John Doe') {
                   console.log(greeter, name); // Hello John Doe
                 }
               </code></pre>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section>
-        <h3>Template literals</h3>
+        <section>
+          <h3>Template literals</h3>
 
-        <div class="fragment">
-          Prima
-          <pre><code data-trim>
+          <div class="fragment">
+            Prima
+            <pre><code data-trim>
                 const greeter = "Hello ";
                 const name = "John Doe";
                 console.log("Hey! " + greeter + name); // Hey! Hello John Doe!             
               </code></pre>
-        </div>
+          </div>
 
-        <div class="fragment">
-          Dopo
-          <pre><code data-trim>
+          <div class="fragment">
+            Dopo
+            <pre><code data-trim>
                     const greeter = "Hello ";
                     const name = "John Doe";
                     console.log(`Hey! ${greeter} ${name}`); // Hey! Hello John Doe!    
                 </code></pre>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section>
         <section>
-          <h3>Classi (I)</h3>
+          <section>
+            <h3>Classi (I)</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
             class Car {
               constructor(model) {
                 this.model = model;
@@ -295,12 +309,12 @@ var myAwesomeObject = {
             const clio = new Car("Clio");
             clio.sayModel(); // I'm a Clio
                 </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Classi (II)</h3>
+          <section>
+            <h3>Classi (II)</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
               class Clio extends Car {
                 constructor() {
                   super("Clio");
@@ -310,13 +324,13 @@ var myAwesomeObject = {
               const myClio = new Clio();
               myClio.sayModel(); // I'm a Clio
                   </code></pre>
+          </section>
         </section>
-      </section>
 
-      <section>
         <section>
-          <h3>Moduli</h3>
-          <pre><code data-trim>
+          <section>
+            <h3>Moduli</h3>
+            <pre><code data-trim>
             // utils.js
             module.exports = {
               sum: function(a, b) {
@@ -328,11 +342,11 @@ var myAwesomeObject = {
             const utils = require("utils.js");
             console.log(utils.sum(1, 2)); // 3
           </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Moduli</h3>
-          <pre><code data-trim>
+          <section>
+            <h3>Moduli</h3>
+            <pre><code data-trim>
               // utils.js
               export const sum = (a, b) => a + b;
   
@@ -340,11 +354,11 @@ var myAwesomeObject = {
               import { sum } from "./utils";
               console.log(sum(1, 2)); // 3
             </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Moduli</h3>
-          <pre><code data-trim>
+          <section>
+            <h3>Moduli</h3>
+            <pre><code data-trim>
                 // utils.js
                 export const sum = (a, b) => a + b;
                 export const diff = (a , b) => a - b;
@@ -354,11 +368,11 @@ var myAwesomeObject = {
                 console.log(sum(1, 2)); // 3
                 console.log(diff(3, 2)); // 1
               </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Moduli</h3>
-          <pre><code data-trim>
+          <section>
+            <h3>Moduli</h3>
+            <pre><code data-trim>
                   // utils.js
                   export const sum = (a, b) => a + b;
                   export const diff = (a , b) => a - b;
@@ -367,11 +381,11 @@ var myAwesomeObject = {
                   import * as utils from "./utils";
                   console.log(utils.sum(1, 2)); // 3
                 </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Moduli</h3>
-          <pre><code data-trim>
+          <section>
+            <h3>Moduli</h3>
+            <pre><code data-trim>
                     // sum.js
                     export default (a, b) => a + b;
         
@@ -379,14 +393,14 @@ var myAwesomeObject = {
                     import sum from "./sum";
                     console.log(sum(1, 2)); // 3
                   </code></pre>
+          </section>
         </section>
-      </section>
 
-      <section>
         <section>
-          <h3>Destructuring arrays</h3>
+          <section>
+            <h3>Destructuring arrays</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
           var versesOfAnAwesomeSong = [
             "Master of puppets", 
             "I'm pulling your strings", 
@@ -398,12 +412,12 @@ var myAwesomeObject = {
           console.log("The title is: " + title); 
           // The title is Master of puppets        
         </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Destructuring</h3>
+          <section>
+            <h3>Destructuring</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
           const versesOfAnAwesomeSong = [
             "Master of puppets", 
             "I'm pulling your strings", 
@@ -415,12 +429,12 @@ var myAwesomeObject = {
             console.log(`The title is: ${title}`); 
             // The title is Master of puppets        
           </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Destructuring</h3>
+          <section>
+            <h3>Destructuring</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
               const versesOfAnAwesomeSong = [
                 "Master of puppets", 
                 "I'm pulling your strings", 
@@ -434,14 +448,14 @@ var myAwesomeObject = {
               // Twisting your mind
               // and smashing your dreams
             </code></pre>
+          </section>
         </section>
-      </section>
 
-      <section>
         <section>
-          <h3>Destructuring objects</h3>
+          <section>
+            <h3>Destructuring objects</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
             var singer = {
               name: "Geddy",
               surname: "Lee"
@@ -456,12 +470,12 @@ var myAwesomeObject = {
             sayHello(name, surname);
             // Hello Geddy Lee
           </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Destructuring objects</h3>
+          <section>
+            <h3>Destructuring objects</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
               const singer = {
                 name: "Geddy",
                 surname: "Lee"
@@ -475,14 +489,14 @@ var myAwesomeObject = {
               sayHello(name, surname);
               // Hello Geddy Lee
             </code></pre>
+          </section>
         </section>
-      </section>
 
-      <section>
         <section>
-          <h3>Async/Await (I)</h3>
+          <section>
+            <h3>Async/Await (I)</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
             function getUserFromApis () {
               return new Promise((resolve, reject) => {
                 request('https://mybackend.com/user/666', (err, res, body) => {
@@ -494,12 +508,12 @@ var myAwesomeObject = {
               });
             }
             </code></pre>
-        </section>
+          </section>
 
-        <section>
-          <h3>Async/Await (II)</h3>
+          <section>
+            <h3>Async/Await (II)</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
             function sayMyName () {
               getUserFromApis()
                 .then(function(user) {
@@ -510,12 +524,12 @@ var myAwesomeObject = {
                 });
             }
             </code></pre>
-        </section>        
+          </section>
 
-        <section>
-          <h3>Async/Await (III)</h3>
+          <section>
+            <h3>Async/Await (III)</h3>
 
-          <pre><code data-trim>
+            <pre><code data-trim>
             const getUserFromApis = () => {
               return request('https://mybackend.com/user/666');
             }
@@ -529,72 +543,168 @@ var myAwesomeObject = {
               }
             }
             </code></pre>
-        </section>           
+          </section>
+
+          <section>
+            <img
+              src="https://d33wubrfki0l68.cloudfront.net/62d89c9844171614eb5dea00888689cccd1cbc30/31022/images/promiseasyncjs/callback_hell_meme.jpg"
+            />
+          </section>
+        </section>
 
         <section>
-          <img src="https://d33wubrfki0l68.cloudfront.net/62d89c9844171614eb5dea00888689cccd1cbc30/31022/images/promiseasyncjs/callback_hell_meme.jpg">
+          <img
+            src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/11/1480354939es6-meme.jpg"
+          />
+        </section>
+
+        <section>
+          <h3>React JS</h3>
+          <ul>
+            <li class="fragment">La "V" del MVC</li>
+            <li class="fragment">Virtual DOM</li>
+            <li class="fragment">JSX</li>
+            <li class="fragment">Isomorfico</li>
+            <li class="fragment">Facile da impare™</li>
+          </ul>
+
+          <aside class="notes">
+            Possibilità di creare compontenti riutilizzabili: se potessimo
+            creare nuovi componenti customizzabili?
+          </aside>
+        </section>
+
+        <section>
+          <img
+            src="https://3wga6448744j404mpt11pbx4-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/react-hype.jpg"
+          />
+        </section>
+
+        <section>
+          <a href="https://jsfiddle.net/job5t2c7/">
+            <p>JS Fiddle</p>
+            <p>https://jsfiddle.net/job5t2c7/</p>
+          </a>
+        </section>
+
+        <section>
+          <section>
+            <h3>Everything is a component</h3>
+
+            <img
+              src="https://cdn-images-1.medium.com/max/1600/1*bvQNHjZOXcl-ds9A4AWYVg.png"
+            />
+          </section>
+
+          <section>
+            <h3>Everything is a component</h3>
+
+            <pre><code data-trim>
+              &lt;a href=&quot;http://facebook.com&quot;&gt;
+                &lt;img src=&quot;http://facebook.com/logo.png&quot; /&gt;
+              &lt;/a&gt;
+              </code></pre>
+
+            <pre class="fragment"><code data-trim>
+              &lt;ClickableImage 
+                logo=&quot;http://facebook.com/logo.png&quot; 
+                url=&quot;http://facebook.com&quot; /&gt;
+              </code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>JSX</h3>
+
+            <pre><code data-trim>
+          const MyApp = () => {
+            return (
+              React.createElement('h1', null, 'Hello!')
+            );
+          };
+          
+          ReactDOM.render(React.createElement(MyApp), 
+            document.querySelector("#app"));
+        </code></pre>
+          </section>
+
+          <section>
+            <h3>JSX</h3>
+
+            <pre><code data-trim>
+          const MyApp = () => {
+            return (
+              &lt;h1&gt;Hello!&lt;/h1&gt;
+            );
+          };
+          
+          ReactDOM.render(&lt;MyApp /&gt;, document.querySelector("#app"))          
+        </code></pre>
+
+            <pre class="fragment"><code data-trim>
+          // Shorter
+          const MyApp = () => &lt;h1&gt;Hello!&lt;/h1&gt;;
+          ReactDOM.render(&lt;MyApp /&gt;, document.querySelector("#app"))          
+        </code></pre>
+          </section>
+        </section>
+
+        <section>
+        <section>
+          <h3>Project startup</h3>
+          <a href="https://github.com/marcocot/react-introduction">
+            https://github.com/marcocot/react-introduction
+          </a>
+        </section>
+
+        <section>
+          <h3>Tools</h3>
+
+          <ul>
+            <li class="fragment">Parcel</li>
+            <li class="fragment">Babel</li>
+            <li class="fragment">ESLint</li>
+          </ul>
         </section>
       </section>
 
-      <section>
-        <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/11/1480354939es6-meme.jpg">
-      </section>
+        <section>
+          <h3>Q&A</h3>
+        </section>
 
-      <section>
-        <h3>React JS</h3>
-        <ul>
-          <li class="fragment">La "V" del MVC</li>
-          <li class="fragment">Virtual DOM</li>
-          <li class="fragment">JSX</li>
-          <li class="fragment">Isomorfico</li>
-        </ul>
-
-        <aside class="notes">
-          Possibilità di creare compontenti riutilizzabili: se potessimo creare nuovi componenti customizzabili?
-        </aside>
-      </section>
-
-      <section>
-        <a href="https://jsfiddle.net/job5t2c7/">
-          <p>JS Fiddle</p>
-          <p>https://jsfiddle.net/job5t2c7/</p>
-        </a>
-      </section>      
-
-      <section>
-        <img src="https://i.gifer.com/Z9jS.gif" />
-      </section>
+        <section><img src="https://i.gifer.com/Z9jS.gif" /></section>
+      </div>
     </div>
-  </div>
 
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-  <script>
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
-    Reveal.initialize({
-      dependencies: [{
-          src: "plugin/markdown/marked.js"
-        },
-        {
-          src: "plugin/markdown/markdown.js"
-        },
-        {
-          src: "plugin/notes/notes.js",
-          async: true
-        },
-        {
-          src: "plugin/highlight/highlight.js",
-          async: true,
-          callback: function () {
-            hljs.initHighlightingOnLoad();
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          {
+            src: "plugin/markdown/marked.js"
+          },
+          {
+            src: "plugin/markdown/markdown.js"
+          },
+          {
+            src: "plugin/notes/notes.js",
+            async: true
+          },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
           }
-        }
-      ]
-    });
-  </script>
-</body>
-
+        ]
+      });
+    </script>
+  </body>
 </html>
