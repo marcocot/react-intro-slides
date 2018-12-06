@@ -1,0 +1,26 @@
+{
+  "name": "react-introduction",
+  "version": "1.0.0",
+  "description": "Introduzione a React",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "https://github.com/marcocot/react-introduction.git",
+  "author": "Marco Cotrufo <marco.cotrufo@amaris.com>",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html",
+    "serve": "serve dist"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "parcel-bundler": "^1.10.2",
+    "serve": "^10.0.2"
+  }
+}
